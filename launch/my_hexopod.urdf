@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<robot name="my_hexopod" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <link name="frame">
+    <visual>
+      <origin rpy="0 0 0" xyz="0.15 0 0.35"/>
+      <geometry>
+        <mesh filename="package://my_hexpod/meshes/frame.stl"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <joint name="frame_to_right_leg_1_coxa" type="fixed">
+    <parent link="frame"/>
+    <child link="right_leg_1_coxa"/>
+    <origin xyz="0 0 .35"/>
+  </joint>
+
+  <link name="right_leg_1_coxa">
+    <visual>
+      <origin rpy="0 0 0" xyz="0.15 0 0.35"/>
+      <geometry>
+        <mesh filename="package://my_hexpod/meshes/right-coxa2.stl"/>
+      </geometry>
+    </visual>
+  </link>
+  
+</robot>
